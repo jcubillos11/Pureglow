@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find Your Protocol — PureGlow</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="assets/images/logo-blue.png" alt="pureglow" style="height:36px"></a>
+    <ul class="nav-menu">
+      <li><a href="index.html" data-translate="nav.home">Home</a></li>
+      <li><a href="shop.html" data-translate="nav.shop">Shop</a></li>
+      <li><a href="about.html" data-translate="nav.about">About</a></li>
+      <li><a href="testimonials.html" data-translate="nav.testimonials">Testimonials</a></li>
+      <li><a href="blog.html" data-translate="nav.blog">Journal</a></li>
+      <li><a href="faq.html" data-translate="nav.faq">FAQ</a></li>
+      <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="lang-switcher"><button data-lang="en">EN</button><span class="sep">|</span><button data-lang="es">ES</button></div>
+      <a href="account.html" class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg></a>
+      <a href="#" class="nav-icon" data-open-cart><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-badge">0</span></a>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <div class="eyebrow" data-translate="quiz.eyebrow">Personalized For You</div>
+    <h1 data-translate="quiz.title">Find your <em>perfect protocol</em></h1>
+    <p data-translate="quiz.sub">A 60-second quiz to discover which peptides align with your goals.</p>
+  </div>
+</header>
+
+<section style="background:var(--color-gray);padding:20px 0 120px">
+  <div id="quiz-container" class="quiz-container"></div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><div class="footer-logo"><img src="assets/images/logo-blue.png" alt="pureglow" style="height:36px"></div><p data-translate="f.newsletter.sub">Rituals delivered monthly.</p><form class="newsletter-form" onsubmit="return submitNewsletter(event)"><input type="email" data-translate-placeholder="nl.placeholder" required><button type="submit">→</button></form></div>
+      <div><h5 data-translate="f.shop">Shop</h5><ul><li><a href="shop.html">All Products</a></li><li><a href="product-ghkcu.html">GHK-Cu</a></li><li><a href="product-retatrutide.html">Retatrutide</a></li><li><a href="product-bacwater.html">BAC Water</a></li></ul></div>
+      <div><h5 data-translate="f.about">About</h5><ul><li><a href="about.html">About</a></li><li><a href="blog.html">Journal</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h5 data-translate="f.help">Help</h5><ul><li><a href="faq.html">FAQ</a></li><li><a href="account.html">Account</a></li><li><a href="cart.html">Cart</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div data-translate="f.rights">© 2026 PureGlow.</div><div>SSL Secure · Lab Tested</div></div>
+  </div>
+</footer>
+
+<div class="cart-overlay"></div>
+<aside class="cart-sidebar">
+  <div class="cart-header"><h3 data-translate="cart.title">Your Bag</h3><button class="cart-close">×</button></div>
+  <div class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-subtotal"><span data-translate="cart.subtotal">Subtotal</span><span class="subtotal-val">$0.00</span></div>
+    <div class="cart-subtotal total"><span data-translate="cart.total">Total</span><span class="total-val">$0.00</span></div>
+    <a href="checkout.html" class="btn btn-primary btn-block" style="margin-top:16px" data-translate="cart.checkout">Checkout</a>
+  </div>
+</aside>
+
+<div class="cookie-consent" id="cookie-consent"><p data-translate="cookie.text">We use cookies.</p><button class="btn btn-primary btn-sm" onclick="acceptCookies()" data-translate="cookie.accept">Accept</button></div>
+
+<script src="js/translations.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
