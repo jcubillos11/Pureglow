@@ -17,10 +17,14 @@ function init() {
   initQuiz();
   initCartSidebar();
   renderTestimonials();
+  renderTestimonialsPage();
   renderFAQ();
   initCheckoutSteps();
   initAccountTabs();
   initShopFilters();
+  Currency.load();
+  Currency.set(Currency.current);
+  initCurrencySelector();
 }
 
 // Language
@@ -49,6 +53,7 @@ function setLanguage(lang) {
   // Re-render dynamic content
   Cart.updateUI();
   renderTestimonials();
+  renderTestimonialsPage();
   renderFAQ();
   renderQuizStep();
 }
@@ -62,20 +67,27 @@ function initNav() {
   window.addEventListener('scroll', handler, { passive: true });
 }
 
-// Mobile menu
+// Mobile menu — right-side drawer
 function initMobileMenu() {
   const btn = document.querySelector('.hamburger');
   const menu = document.querySelector('.nav-menu');
   if (!btn || !menu) return;
 
+  // Create overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'mobile-menu-overlay';
+  document.body.appendChild(overlay);
+
   function openMenu() {
     menu.classList.add('open');
     btn.classList.add('active');
+    overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
   }
   function closeMenu() {
     menu.classList.remove('open');
     btn.classList.remove('active');
+    overlay.classList.remove('open');
     document.body.style.overflow = '';
   }
 
@@ -87,12 +99,8 @@ function initMobileMenu() {
   // Close when a nav link is clicked
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
-  // Close when tapping outside the menu
-  document.addEventListener('click', (e) => {
-    if (menu.classList.contains('open') && !menu.contains(e.target) && e.target !== btn) {
-      closeMenu();
-    }
-  });
+  // Close on overlay tap
+  overlay.addEventListener('click', closeMenu);
 
   // Close on Escape key
   document.addEventListener('keydown', (e) => {
@@ -278,6 +286,25 @@ function renderTestimonials() {
   }
 }
 
+function renderTestimonialsPage() {
+  const grid = document.getElementById('testimonials-page-grid');
+  if (!grid) return;
+  const lang = localStorage.getItem('aura_lang') || 'en';
+  const items = window.testimonialsData[lang] || window.testimonialsData.en;
+  grid.innerHTML = items.map(t => `
+    <div class="testimonial-card fade-in" style="min-width:unset;max-width:unset">
+      ${t.photo ? `<div class="testimonial-photo"><img src="${t.photo}" alt="${t.name}" loading="lazy"></div>` : ''}
+      <div class="testimonial-stars testimonial-rating">${'★'.repeat(t.stars)}</div>
+      <p class="testimonial-text">"${t.text}"</p>
+      <div class="testimonial-author">
+        <strong class="testimonial-name">${t.name}</strong>
+        <span class="testimonial-meta">${t.meta}</span>
+      </div>
+    </div>
+  `).join('');
+  initScrollAnimations();
+}
+
 // Quiz
 let quizState = { step: 0, answers: [], recommendation: null };
 
@@ -414,6 +441,13 @@ function initAccountTabs() {
     const target = btn.dataset.target;
     document.querySelectorAll('.account-pane').forEach(p => p.style.display = p.dataset.pane === target ? 'block' : 'none');
   }));
+}
+
+// Currency selector
+function initCurrencySelector() {
+  document.querySelectorAll('.currency-btn').forEach(btn => {
+    btn.addEventListener('click', () => Currency.set(btn.dataset.currency));
+  });
 }
 
 // Shop filters

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -15,12 +15,41 @@
       <li><a href="shop.html" data-translate="nav.shop">Shop</a></li>
       <li><a href="about.html" data-translate="nav.about">About</a></li>
       <li><a href="testimonials.html" data-translate="nav.testimonials">Testimonials</a></li>
-      <li><a href="blog.html" data-translate="nav.blog">Journal</a></li>
-      <li><a href="faq.html" data-translate="nav.faq">FAQ</a></li>
+            <li><a href="faq.html" data-translate="nav.faq">FAQ</a></li>
       <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+          <li class="mobile-only-nav"><a href="cart.html" data-translate="nav.cart">Cart</a></li>
+      <li class="mobile-only-nav" style="border-bottom:none">
+        <div class="mobile-nav-controls">
+          <div>
+            <div class="mobile-controls-label">Language</div>
+            <div class="mobile-lang-row">
+              <button data-lang="en" class="mobile-ctrl-btn">EN &middot; English</button>
+              <button data-lang="es" class="mobile-ctrl-btn">ES &middot; Espa&ntilde;ol</button>
+            </div>
+          </div>
+          <div>
+            <div class="mobile-controls-label">Currency</div>
+            <div class="mobile-currency-row">
+              <button class="currency-btn mobile-ctrl-btn" data-currency="USD">USD</button>
+              <button class="currency-btn mobile-ctrl-btn" data-currency="COP">COP</button>
+              <button class="currency-btn mobile-ctrl-btn" data-currency="GBP">GBP</button>
+            </div>
+          </div>
+        </div>
+      </li>
     </ul>
     <div class="nav-actions">
       <div class="lang-switcher"><button data-lang="en">EN</button><span class="sep">|</span><button data-lang="es">ES</button></div>
+      <div class="currency-selector">
+        <button class="currency-btn active" data-currency="USD">USD</button>
+        <span class="sep">|</span>
+        <button class="currency-btn" data-currency="COP">COP</button>
+        <span class="sep">|</span>
+        <button class="currency-btn" data-currency="GBP">GBP</button>
+      </div>
+      <a href="https://www.instagram.com/pureglow_col/" class="nav-icon" target="_blank" rel="noopener" title="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
       <a href="account.html" class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg></a>
       <a href="#" class="nav-icon" data-open-cart><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-badge">0</span></a>
       <button class="hamburger"><span></span><span></span><span></span></button>
@@ -30,7 +59,6 @@
 
 <header class="blog-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> / <span>Journal</span></div>
     <div class="eyebrow">The PureGlow Journal</div>
     <h1 style="font-style:italic;font-weight:300">Science. Ritual. <em style="color:var(--color-orchid)">Beauty.</em></h1>
 
@@ -125,7 +153,7 @@
     <div class="footer-grid">
       <div><div class="footer-logo"><img src="assets/images/logo-blue.png" alt="pureglow" style="height:36px"></div><p data-translate="f.newsletter.sub">Rituals delivered monthly.</p><form class="newsletter-form" onsubmit="return submitNewsletter(event)"><input type="email" data-translate-placeholder="nl.placeholder" required><button type="submit">→</button></form></div>
       <div><h5 data-translate="f.shop">Shop</h5><ul><li><a href="shop.html">All Products</a></li><li><a href="product-ghkcu.html">GHK-Cu</a></li><li><a href="product-retatrutide.html">Retatrutide</a></li><li><a href="product-bacwater.html">BAC Water</a></li></ul></div>
-      <div><h5 data-translate="f.about">About</h5><ul><li><a href="about.html">About</a></li><li><a href="blog.html">Journal</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h5 data-translate="f.about">About</h5><ul><li><a href="about.html">About</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
       <div><h5 data-translate="f.help">Help</h5><ul><li><a href="faq.html">FAQ</a></li><li><a href="account.html">Account</a></li><li><a href="cart.html">Cart</a></li></ul></div>
     </div>
     <div class="footer-bottom"><div data-translate="f.rights">© 2026 PureGlow.</div><div>SSL Secure · Lab Tested</div></div>
@@ -146,6 +174,7 @@
 <div class="cookie-consent" id="cookie-consent"><p data-translate="cookie.text">We use cookies.</p><button class="btn btn-primary btn-sm" onclick="acceptCookies()" data-translate="cookie.accept">Accept</button></div>
 
 <script src="js/translations.js"></script>
+<script src="js/currency.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/main.js"></script>
 </body>

@@ -15,16 +15,16 @@ const translations = {
     'nav.cart': 'Cart',
 
     // Hero
-    'hero.eyebrow': 'Premium Peptide Science',
+    'hero.eyebrow': 'Research Purposes Only',
     'hero.title': 'Elevate your <em>wellness ritual</em>',
-    'hero.sub': 'Results backed by science. Purity you can feel. Your glow, every day.',
+    'hero.sub': 'Results backed by science. Purity you can feel. Performance, longevity and vitality — for everyone.',
     'hero.cta1': 'Shop Collection',
     'hero.cta2': 'Find Your Protocol',
 
     // Sections
     'featured.eyebrow': 'Bestsellers',
     'featured.title': 'The Essentials',
-    'featured.sub': 'Three formulations. Endless possibilities. Discover the peptides trusted by thousands of women worldwide.',
+    'featured.sub': 'Three formulations. Endless possibilities. Discover the peptides trusted by thousands of people worldwide.',
     'why.eyebrow': 'Why PureGlow',
     'why.title': 'Uncompromising standards',
     'why.q': 'Results Backed by Science',
@@ -41,8 +41,8 @@ const translations = {
     'why.c.d': 'SSL-encrypted payments and 100% satisfaction guarantee.',
 
     'life.eyebrow': 'The PureGlow Philosophy',
-    'life.title': 'Beauty begins <em>within</em>.',
-    'life.sub': 'True elegance is a ritual. Every drop, every dose, every moment — designed to honor the extraordinary woman you already are.',
+    'life.title': 'Wellness begins <em>within</em>.',
+    'life.sub': 'True performance is a ritual. Every drop, every dose, every moment — designed to honor the extraordinary person you already are.',
     'life.cta': 'Read Our Story',
 
     'bundles.eyebrow': 'Curated Sets',
@@ -141,7 +141,7 @@ const translations = {
     'nl.sub': 'Sign up for 10% off your first order and early access to new drops.',
     'nl.placeholder': 'Your email address',
     'nl.cta': 'Unlock 10% Off',
-    'nl.thanks': 'Welcome — check your inbox.',
+    'nl.thanks': 'Welcome to the circle — check your inbox.',
 
     // Footer
     'f.shop': 'Shop',
@@ -183,15 +183,15 @@ const translations = {
     'nav.wishlist': 'Favoritos',
     'nav.cart': 'Carrito',
 
-    'hero.eyebrow': 'Ciencia Peptídica Premium',
+    'hero.eyebrow': 'Solo con Fines de Investigación',
     'hero.title': 'Eleva tu <em>ritual de bienestar</em>',
-    'hero.sub': 'Resultados respaldados por la ciencia. Pureza que puedes sentir. Tu glow, cada día.',
+    'hero.sub': 'Resultados respaldados por la ciencia. Pureza que puedes sentir. Rendimiento, longevidad y vitalidad — para todos.',
     'hero.cta1': 'Ver Colección',
     'hero.cta2': 'Tu Protocolo',
 
     'featured.eyebrow': 'Más Vendidos',
     'featured.title': 'Los Esenciales',
-    'featured.sub': 'Tres formulaciones. Posibilidades infinitas. Descubre los péptidos que miles de mujeres eligen.',
+    'featured.sub': 'Tres formulaciones. Posibilidades infinitas. Descubre los péptidos que miles de personas eligen en todo el mundo.',
     'why.eyebrow': 'Por Qué PureGlow',
     'why.title': 'Estándares sin compromiso',
     'why.q': 'Resultados Respaldados por la Ciencia',
@@ -208,8 +208,8 @@ const translations = {
     'why.c.d': 'Pagos cifrados SSL y garantía de satisfacción total.',
 
     'life.eyebrow': 'La Filosofía PureGlow',
-    'life.title': 'La belleza comienza <em>desde dentro</em>.',
-    'life.sub': 'La elegancia verdadera es un ritual. Cada gota, cada dosis, cada momento — diseñado para honrar a la mujer extraordinaria que ya eres.',
+    'life.title': 'El bienestar comienza <em>desde dentro</em>.',
+    'life.sub': 'El rendimiento real es un ritual. Cada gota, cada dosis, cada momento — diseñado para honrar a la persona extraordinaria que ya eres.',
     'life.cta': 'Nuestra Historia',
 
     'bundles.eyebrow': 'Sets Seleccionados',
@@ -302,7 +302,7 @@ const translations = {
     'nl.sub': 'Regístrate y obtén 10% en tu primer pedido más acceso anticipado.',
     'nl.placeholder': 'Tu correo electrónico',
     'nl.cta': 'Obtener 10%',
-    'nl.thanks': 'Bienvenida — revisa tu correo.',
+    'nl.thanks': 'Bienvenido — revisa tu correo.',
 
     'f.shop': 'Tienda',
     'f.about': 'Nosotros',
@@ -325,7 +325,7 @@ const translations = {
     'toast.wishlist.remove': 'Eliminado de favoritos',
     'toast.discount.ok': 'Descuento aplicado',
     'toast.discount.bad': 'Código no válido',
-    'toast.subscribed': 'Suscrita — gracias',
+    'toast.subscribed': 'Suscrito — gracias',
   }
 };
 
@@ -434,22 +434,22 @@ const quizData = {
         { text: 'Mantenimiento y prevención', tag: 'skin' }
       ]},
       { q: '¿Cuál es tu experiencia con péptidos?', options: [
-        { text: 'Nueva en péptidos', tag: 'skin' },
+        { text: 'Nuevo/a en péptidos', tag: 'skin' },
         { text: 'Algo de experiencia', tag: 'both' },
-        { text: 'Usuaria avanzada', tag: 'metabolic' },
+        { text: 'Usuario/a avanzado/a', tag: 'metabolic' },
         { text: 'Los uso desde hace años', tag: 'both' }
       ]},
       { q: '¿Cómo describirías tu estilo de vida?', options: [
         { text: 'Activo y saludable', tag: 'metabolic' },
-        { text: 'Belleza y autocuidado', tag: 'skin' },
+        { text: 'Bienestar y autocuidado', tag: 'skin' },
         { text: 'Equilibrado en todo', tag: 'both' },
-        { text: 'Lista para un reset', tag: 'both' }
+        { text: 'Listo/a para un reset', tag: 'both' }
       ]}
     ],
     results: {
       skin: { title: 'Tu Protocolo: Piel Radiante', desc: 'Basado en tus respuestas, GHK-Cu 50mg es tu match perfecto. Este péptido de cobre está diseñado para piel luminosa, cabello más grueso y renovación celular.', product: 'ghkcu' },
       metabolic: { title: 'Tu Protocolo: Bienestar Metabólico', desc: 'Retatrutide 10mg es tu elección ideal. Este péptido avanzado apoya la función metabólica, la composición corporal y la energía sostenida.', product: 'reta' },
-      both: { title: 'Tu Protocolo: Wellness Completo', desc: 'Estás lista para la experiencia completa. Nuestro Bundle Wellness Completo combina GHK-Cu, Retatrutide y BAC Water — ahorra $14.98.', product: 'bundle3' }
+      both: { title: 'Tu Protocolo: Wellness Completo', desc: 'Estás listo/a para la experiencia completa. Nuestro Bundle Wellness Completo combina GHK-Cu, Retatrutide y BAC Water — ahorra $14.98.', product: 'bundle3' }
     }
   }
 };

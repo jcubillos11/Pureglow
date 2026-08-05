@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -15,12 +15,41 @@
       <li><a href="shop.html" data-translate="nav.shop">Shop</a></li>
       <li><a href="about.html" data-translate="nav.about">About</a></li>
       <li><a href="testimonials.html" data-translate="nav.testimonials">Testimonials</a></li>
-      <li><a href="blog.html" data-translate="nav.blog">Journal</a></li>
       <li><a href="faq.html" data-translate="nav.faq">FAQ</a></li>
       <li><a href="contact.html" data-translate="nav.contact">Contact</a></li>
+          <li class="mobile-only-nav"><a href="cart.html" data-translate="nav.cart">Cart</a></li>
+      <li class="mobile-only-nav" style="border-bottom:none">
+        <div class="mobile-nav-controls">
+          <div>
+            <div class="mobile-controls-label">Language</div>
+            <div class="mobile-lang-row">
+              <button data-lang="en" class="mobile-ctrl-btn">EN &middot; English</button>
+              <button data-lang="es" class="mobile-ctrl-btn">ES &middot; Espa&ntilde;ol</button>
+            </div>
+          </div>
+          <div>
+            <div class="mobile-controls-label">Currency</div>
+            <div class="mobile-currency-row">
+              <button class="currency-btn mobile-ctrl-btn" data-currency="USD">USD</button>
+              <button class="currency-btn mobile-ctrl-btn" data-currency="COP">COP</button>
+              <button class="currency-btn mobile-ctrl-btn" data-currency="GBP">GBP</button>
+            </div>
+          </div>
+        </div>
+      </li>
     </ul>
     <div class="nav-actions">
       <div class="lang-switcher"><button data-lang="en">EN</button><span class="sep">|</span><button data-lang="es">ES</button></div>
+      <div class="currency-selector">
+        <button class="currency-btn active" data-currency="USD">USD</button>
+        <span class="sep">|</span>
+        <button class="currency-btn" data-currency="COP">COP</button>
+        <span class="sep">|</span>
+        <button class="currency-btn" data-currency="GBP">GBP</button>
+      </div>
+      <a href="https://www.instagram.com/pureglow_col/" class="nav-icon" target="_blank" rel="noopener" title="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
       <a href="account.html" class="nav-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0116 0v1"/></svg></a>
       <a href="#" class="nav-icon" data-open-cart><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><span class="cart-badge">0</span></a>
       <button class="hamburger"><span></span><span></span><span></span></button>
@@ -30,22 +59,22 @@
 
 <header class="page-header">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a> / <span>About</span></div>
     <div class="eyebrow">Our Story</div>
-    <h1>Elegance. Science. Ritual.</h1>
-    <p>PureGlow was born from an obsession: peptide science deserves the same reverence as fine skincare.</p>
+    <h1>Science. Purity. <em>Longevity.</em></h1>
+    <p>PureGlow was founded on a single conviction: everyone deserves access to peptide science of uncompromising quality.</p>
   </div>
 </header>
 
 <section class="section">
   <div class="container">
-    <div class="about-story fade-in">
-      <div class="about-image"></div>
+    <div class="about-story fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+      <div class="about-image" style="aspect-ratio:4/5;background:var(--color-navy);border-radius:16px;background-image:url('assets/images/stats-skin.jpg');background-size:cover;background-position:center"></div>
       <div>
         <div class="eyebrow">The Story</div>
         <h2 style="font-style:italic;font-weight:300;margin-bottom:24px">A brand built on <em style="color:var(--color-orchid)">integrity</em>.</h2>
-        <p style="margin-bottom:16px">PureGlow was founded on a simple principle: women who invest in their wellness deserve products of uncompromising quality — sourced with intention, tested with rigor, and presented with grace.</p>
-        <p style="margin-bottom:16px">Every vial is verified for 99%+ purity by an independent third-party laboratory. Every shipment travels in insulated, temperature-controlled packaging. Every touchpoint honors the woman on the receiving end.</p>
+        <p style="margin-bottom:16px">PureGlow was founded on a simple principle: anyone who invests in their wellness deserves products of uncompromising quality — sourced with intention, tested with rigor, and delivered with care.</p>
+        <p style="margin-bottom:16px">Whether your goal is radiant skin, sharper performance, faster recovery or lasting vitality, our peptides are formulated to support every body and every journey. Science does not discriminate — and neither do we.</p>
+        <p style="margin-bottom:16px">Every vial is verified for 99%+ purity by an independent third-party laboratory. Every shipment travels in insulated, temperature-controlled packaging. Every touchpoint honors the person on the receiving end.</p>
         <p>This is not just wellness. This is a ritual worth keeping.</p>
       </div>
     </div>
@@ -59,42 +88,66 @@
       <h2>The pillars of PureGlow</h2>
       <div class="divider"></div>
     </div>
-    <div class="values-grid">
-      <div class="value-item fade-in"><div class="num">01</div><h4 style="font-family:var(--font-heading)">Integrity</h4><p>Every claim backed by third-party testing. Every batch documented.</p></div>
-      <div class="value-item fade-in"><div class="num">02</div><h4 style="font-family:var(--font-heading)">Excellence</h4><p>Pharmaceutical-grade sourcing. 99%+ purity guaranteed.</p></div>
-      <div class="value-item fade-in"><div class="num">03</div><h4 style="font-family:var(--font-heading)">Ritual</h4><p>Wellness as ceremony. Every detail designed with intention.</p></div>
-      <div class="value-item fade-in"><div class="num">04</div><h4 style="font-family:var(--font-heading)">Trust</h4><p>Radical transparency in sourcing, testing and communication.</p></div>
+    <div class="values-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px">
+      <div class="value-item fade-in" style="background:var(--color-white);padding:40px 28px;border-radius:16px;border:1px solid var(--color-border);text-align:center">
+        <div class="num" style="font-family:var(--font-serif);font-size:3rem;color:var(--color-orchid);font-style:italic;margin-bottom:16px">01</div>
+        <h4 style="font-family:var(--font-heading);color:var(--color-navy);margin-bottom:12px">Quality</h4>
+        <p>Pharmaceutical-grade sourcing. 99%+ purity guaranteed on every batch, every time.</p>
+      </div>
+      <div class="value-item fade-in" style="background:var(--color-white);padding:40px 28px;border-radius:16px;border:1px solid var(--color-border);text-align:center">
+        <div class="num" style="font-family:var(--font-serif);font-size:3rem;color:var(--color-orchid);font-style:italic;margin-bottom:16px">02</div>
+        <h4 style="font-family:var(--font-heading);color:var(--color-navy);margin-bottom:12px">Purity</h4>
+        <p>Every claim backed by independent third-party testing. Every batch fully documented and traceable.</p>
+      </div>
+      <div class="value-item fade-in" style="background:var(--color-white);padding:40px 28px;border-radius:16px;border:1px solid var(--color-border);text-align:center">
+        <div class="num" style="font-family:var(--font-serif);font-size:3rem;color:var(--color-orchid);font-style:italic;margin-bottom:16px">03</div>
+        <h4 style="font-family:var(--font-heading);color:var(--color-navy);margin-bottom:12px">Science</h4>
+        <p>Formulations rooted in peer-reviewed research. We follow the data — always.</p>
+      </div>
+      <div class="value-item fade-in" style="background:var(--color-white);padding:40px 28px;border-radius:16px;border:1px solid var(--color-border);text-align:center">
+        <div class="num" style="font-family:var(--font-serif);font-size:3rem;color:var(--color-orchid);font-style:italic;margin-bottom:16px">04</div>
+        <h4 style="font-family:var(--font-heading);color:var(--color-navy);margin-bottom:12px">Trust</h4>
+        <p>Radical transparency in sourcing, testing and communication. No hidden ingredients, no inflated claims.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="lifestyle">
-  <div class="lifestyle-decor c1"></div>
-  <div class="lifestyle-decor c2"></div>
-  <div class="container text-center fade-in" style="position:relative;z-index:2">
-    <div class="eyebrow">The PureGlow Promise</div>
-    <h2 style="color:var(--color-white);font-style:italic;font-weight:300">Science that honors <em style="color:var(--color-orchid)">beauty</em>.</h2>
+<section class="section section-navy">
+  <div class="container text-center fade-in">
+    <div class="eyebrow" style="color:var(--color-lime)">Our Mission</div>
+    <h2 style="color:var(--color-white);font-style:italic;font-weight:300;max-width:720px;margin:0 auto 24px">Peptide science. <em style="color:var(--color-orchid)">For everyone.</em></h2>
     <div class="divider"></div>
-    <p style="color:rgba(255,255,255,0.7);font-size:1.125rem;max-width:640px;margin:24px auto 40px">We work only with laboratories that share our standards. Every gram of every peptide is a promise to the woman who will use it.</p>
-    <a href="shop.html" class="btn btn-outline-light btn-lg">Explore the Collection</a>
+    <p style="color:rgba(255,255,255,0.75);font-size:1.125rem;max-width:640px;margin:0 auto 40px">We work only with laboratories that share our standards. Every gram of every peptide is a promise — to the athlete pushing limits, the professional optimizing recovery, and everyone who chooses to invest in their long-term health.</p>
+    <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap">
+      <a href="shop.html" class="btn btn-outline-white btn-lg">Explore the Collection</a>
+      <a href="quiz.html" class="btn btn-accent btn-lg">Find Your Protocol</a>
+    </div>
   </div>
 </section>
 
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div><div class="footer-logo"><img src="assets/images/logo-blue.png" alt="pureglow" style="height:36px"></div><p data-translate="f.newsletter.sub">Rituals delivered monthly.</p><form class="newsletter-form" onsubmit="return submitNewsletter(event)"><input type="email" data-translate-placeholder="nl.placeholder" required><button type="submit">→</button></form></div>
+      <div>
+        <div class="footer-logo"><img src="assets/images/logo-blue.png" alt="pureglow" style="height:36px"></div>
+        <p data-translate="f.newsletter.sub">Rituals, science and early access delivered monthly.</p>
+        <form class="newsletter-form" onsubmit="return submitNewsletter(event)"><input type="email" placeholder="Email address" data-translate-placeholder="nl.placeholder" required><button type="submit">&#8594;</button></form>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/pureglow_col/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg></a>
+        </div>
+      </div>
       <div><h5 data-translate="f.shop">Shop</h5><ul><li><a href="shop.html">All Products</a></li><li><a href="product-ghkcu.html">GHK-Cu</a></li><li><a href="product-retatrutide.html">Retatrutide</a></li><li><a href="product-bacwater.html">BAC Water</a></li></ul></div>
-      <div><h5 data-translate="f.about">About</h5><ul><li><a href="about.html">About</a></li><li><a href="blog.html">Journal</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div><h5 data-translate="f.help">Help</h5><ul><li><a href="faq.html">FAQ</a></li><li><a href="account.html">Account</a></li><li><a href="cart.html">Cart</a></li></ul></div>
+      <div><h5 data-translate="f.about">About</h5><ul><li><a href="about.html" data-translate="nav.about">About</a></li><li><a href="testimonials.html" data-translate="nav.testimonials">Testimonials</a></li><li><a href="contact.html" data-translate="nav.contact">Contact</a></li></ul></div>
+      <div><h5 data-translate="f.help">Help</h5><ul><li><a href="faq.html" data-translate="nav.faq">FAQ</a></li><li><a href="account.html" data-translate="nav.account">Account</a></li><li><a href="cart.html" data-translate="nav.cart">Cart</a></li><li><a href="#" data-translate="f.privacy">Privacy Policy</a></li><li><a href="#" data-translate="f.terms">Terms of Service</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><div data-translate="f.rights">© 2026 PureGlow.</div><div>SSL Secure · Lab Tested</div></div>
+    <div class="footer-bottom"><div data-translate="f.rights">&#169; 2026 PureGlow. All rights reserved.</div><div>SSL Secure · Lab Tested</div></div>
   </div>
 </footer>
 
 <div class="cart-overlay"></div>
 <aside class="cart-sidebar">
-  <div class="cart-header"><h3 data-translate="cart.title">Your Bag</h3><button class="cart-close">×</button></div>
+  <div class="cart-header"><h3 data-translate="cart.title">Your Bag</h3><button class="cart-close">&#215;</button></div>
   <div class="cart-items"></div>
   <div class="cart-footer">
     <div class="cart-subtotal"><span data-translate="cart.subtotal">Subtotal</span><span class="subtotal-val">$0.00</span></div>
@@ -103,9 +156,10 @@
   </div>
 </aside>
 
-<div class="cookie-consent" id="cookie-consent"><p data-translate="cookie.text">We use cookies.</p><button class="btn btn-primary btn-sm" onclick="acceptCookies()" data-translate="cookie.accept">Accept</button></div>
+<div class="cookie-consent" id="cookie-consent"><p data-translate="cookie.text">We use cookies to elevate your experience.</p><button class="btn btn-accent btn-sm" onclick="acceptCookies()" data-translate="cookie.accept">Accept</button></div>
 
 <script src="js/translations.js"></script>
+<script src="js/currency.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/main.js"></script>
 </body>
